@@ -1,1 +1,31 @@
-# nahjaybattieste.github.io
+
+
+# Nahjay Battieste - Portfolio
+
+Welcome to my GitHub portfolio! I'm Nahjay Battieste, an aspiring Computer Engineer passionate about merging software and hardware to drive innovation and make a positive impact on the world. This repository showcases some of my most exciting projects, where I've harnessed my skills to create real-world solutions.
+
+## About Me
+
+I'm currently pursuing an Associate in Arts degree at Broward College with a major in Computer Engineering, aiming to transfer to the University of Florida in August 2024. With an overall GPA of 3.93, I'm committed to academic excellence while actively applying my knowledge in practical projects.
+
+## My Projects
+
+### Arduino Weather Station
+- Description: A fully functional weather station built on Arduino, offering real-time monitoring of environmental conditions.
+- Skills Demonstrated: Sensor integration, real-time data processing, and user-friendly interface design.
+
+### Hardware Accelerator Project for Machine Learning
+- Description: A high-performance FPGA hardware accelerator created using Verilog to optimize machine learning model training and inference processes.
+- Skills Demonstrated: Full project lifecycle management, performance validation, and meticulous attention to detail.
+
+### Gesture-Controlled Smart Home System
+- Description: A comprehensive smart home system featuring gesture-based controls and a mobile app interface.
+- Skills Demonstrated: Full-stack development, hardware integration, and AI-powered automation.
+
+Feel free to explore my projects in more detail by visiting the respective project links in this repository. Your feedback and suggestions are always welcome as I continue to learn, grow, and innovate.
+
+## Contact Me
+
+You can reach out to me via email at [nahjaybattieste@gmail.com](mailto:nahjaybattieste@gmail.com), connect with me on [LinkedIn](https://www.linkedin.com/in/nahjay-battieste-a84655224), or visit my personal website [here](https://nahjay.github.io).
+
+Thank you for visiting my portfolio, and I look forward to sharing more exciting projects with you in the future!
