@@ -18,7 +18,7 @@ I'm currently pursuing an Associate in Arts degree at Broward College with a maj
 - Description: Designed and trained a machine learning model to be able to recognize images of 10 different classifications  (CIFAR-10 Dataset) passed into a web interface.
 - Skills Demonstrated: Full project lifecycle management, proper application of machine learning algorithms, web interface design, and evulation of model parameters.
 
-### Gesture-Controlled Smart Home System
+### Raspberry PI Gesture-Controlled System
 - Description: A comprehensive Raspberry PI system featuring gesture-based controls and a mobile app interface.
 - Skills Demonstrated: Full-stack development, hardware integration, and real-time computer vision processing.
 
