@@ -10,6 +10,10 @@ I'm currently pursuing an Associate in Arts degree at Broward College with a maj
 
 ## My Projects
 
+### Jetson Nano Custom Kernel Modules
+- Description: Unified CPU-based Linux kernel modules and GPU-accelerated CUDA kernels into a comprehensive firmware solution for efficient .ppm image manipulation on the NVIDIA Jetson Nano, optimizing performance through parallel processing and seamless integration.
+- Skills Demonstrated: C/C++ programming, Linux kernel module development, CUDA kernel development, and parallel processing.
+
 ### Arduino Weather Station
 - Description: A fully functional weather station built on Arduino, offering real-time monitoring of environmental conditions.
 - Skills Demonstrated: Sensor integration, real-time data processing, and user-friendly interface design, RESTFUL API desig, and database integration.
