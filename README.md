@@ -12,15 +12,15 @@ I'm currently pursuing an Associate in Arts degree at Broward College with a maj
 
 ### Arduino Weather Station
 - Description: A fully functional weather station built on Arduino, offering real-time monitoring of environmental conditions.
-- Skills Demonstrated: Sensor integration, real-time data processing, and user-friendly interface design.
+- Skills Demonstrated: Sensor integration, real-time data processing, and user-friendly interface design, RESTFUL API desig, and database integration.
 
-### Hardware Accelerator Project for Machine Learning
-- Description: A high-performance FPGA hardware accelerator created using Verilog to optimize machine learning model training and inference processes.
-- Skills Demonstrated: Full project lifecycle management, performance validation, and meticulous attention to detail.
+### Image Recognition Machine Learning Model
+- Description: Designed and trained a machine learning model to be able to recognize images of 10 different classifications  (CIFAR-10 Dataset) passed into a web interface.
+- Skills Demonstrated: Full project lifecycle management, proper application of machine learning algorithms, web interface design, and evulation of model parameters.
 
-### Gesture-Controlled Smart Home System
-- Description: A comprehensive smart home system featuring gesture-based controls and a mobile app interface.
-- Skills Demonstrated: Full-stack development, hardware integration, and AI-powered automation.
+### Raspberry PI Gesture-Controlled System
+- Description: A comprehensive Raspberry PI system featuring gesture-based controls and a mobile app interface.
+- Skills Demonstrated: Full-stack development, hardware integration, and real-time computer vision processing.
 
 Feel free to explore my projects in more detail by visiting the respective project links in this repository. Your feedback and suggestions are always welcome as I continue to learn, grow, and innovate.
 
