@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Nahjay Battieste - Project Portfolio</title>
+        <title>Project Details - Nahjay Battieste</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -15,16 +15,7 @@
     <body class="is-preload">
 
         <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
-            <!-- Intro -->
-            <div id="intro">
-                <h1>Nahjay Battieste<br />
-                Hardware Portfolio</h1>
-                <p>Computer Engineering Undergraduate specializing in FPGA Design, Computer Architecture, and Embedded Firmware.</p>
-                <ul class="actions">
-                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-                </ul>
-            </div>
+        <div id="wrapper">
 
             <!-- Header -->
             <header id="header">
@@ -34,7 +25,8 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul class="links">
-                    <li class="active"><a href="index.html">Projects</a></li>
+                    <li><a href="index.html">Projects</a></li>
+                    <li class="active"><a href="generic.html">Project Details</a></li>
                     <li><a href="elements.html">About Me</a></li>
                 </ul>
                 <ul class="icons">
@@ -46,85 +38,108 @@
             <!-- Main -->
             <div id="main">
 
-                <!-- Featured Post -->
-                <article class="post featured">
+                <!-- Post -->
+                <section class="post">
                     <header class="major">
-                        <h2><a href="#">FPGA-Based CNN Accelerator<br />
-                        & Memory Hierarchy Design</a></h2>
-                        <p>Designed a high-throughput hardware accelerator for Convolutional Neural Networks on an FPGA. 
-                        Architected a custom sliding-window memory buffer to minimize off-chip bandwidth and implemented a 
-                        fully pipelined RGB datapath in VHDL, achieving single-cycle pixel processing throughput.</p>
+                        <h1>Technical Project<br />
+                        Deep Dive</h1>
+                        <p>A detailed breakdown of my work in Hardware Architecture, RTL Design, and Embedded Firmware.</p>
                     </header>
-                    <ul class="actions special">
-                        <li><a href="#" class="button large">View Project</a></li>
-                    </ul>
-                </article>
 
-                <!-- Posts -->
-                <section class="posts">
-                    
-                    <!-- MIPS Processor -->
-                    <article>
+                    <!-- CNN Accelerator -->
+                    <section>
                         <header>
-                            <h2><a href="#">32-bit MIPS<br />
-                            Microarchitecture</a></h2>
+                            <h2>FPGA-Based CNN Accelerator & Memory Hierarchy</h2>
+                            <p><strong>Tech Stack:</strong> VHDL, Python, Vivado, ModelSim</p>
                         </header>
-                        <p>Designed the microarchitecture and RTL for a 5-stage pipelined MIPS processor. 
-                        Implemented hardware-based hazard detection and a data forwarding unit to resolve 
-                        control and data dependencies without software bubbles, ensuring optimal pipeline efficiency.</p>
-                        <ul class="actions special">
-                            <li><a href="#" class="button">View Details</a></li>
+                        <p>Designed a fully pipelined hardware accelerator for 3×3 RGB convolution operations, targeting high-throughput image processing applications on FPGA fabric. The architecture prioritizes memory bandwidth efficiency through a custom buffering strategy.</p>
+                        <ul>
+                            <li><strong>Pipelined Datapath:</strong> Implemented a high-performance datapath achieving one output pixel per clock cycle (after initial pipeline fill latency), significantly outperforming sequential CPU execution for identical workloads.</li>
+                            <li><strong>Custom Memory Architecture:</strong> Architected a "Sliding Window" buffer and packed RGB memory format. This design minimizes off-chip memory access overhead by reusing pixel data across convolution windows, reducing bandwidth requirements and simplifying address generation logic.</li>
+                            <li><strong>Verification Strategy:</strong> Validated cycle-accurate behavior using a Python reference model to generate golden vectors. Developed a comprehensive VHDL testbench with valid-bit tracking to verify data integrity across all pipeline stages.</li>
                         </ul>
-                    </article>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/CNN-Accelerator" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
+
+                    <hr />
+
+                    <!-- MIPS Processor -->
+                    <section>
+                        <header>
+                            <h2>32-bit MIPS Microarchitecture Design</h2>
+                            <p><strong>Tech Stack:</strong> VHDL, Assembly, Quartus</p>
+                        </header>
+                        <p>Designed and implemented a soft-core 32-bit RISC processor based on the MIPS instruction set architecture. The design focuses on pipeline efficiency and hazard resolution without software intervention.</p>
+                        <ul>
+                            <li><strong>5-Stage Pipeline:</strong> Implemented a classic Fetch, Decode, Execute, Memory, Write-Back pipeline structure to maximize instruction throughput.</li>
+                            <li><strong>Hazard Resolution:</strong> Engineered hardware-based hazard mitigation, including a Forwarding Unit to resolve data dependencies (Read-After-Write) and a Hazard Detection Unit to insert stall cycles only when necessary (e.g., Load-Use hazards).</li>
+                            <li><strong>Subsystem Integration:</strong> Built and integrated word-aligned Instruction and Data Memory modules, a general-purpose Register File, and a custom ALU supporting arithmetic, logical, and branch operations.</li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/MIPS-32" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
+
+                    <hr />
 
                     <!-- Teensy Ray Tracing -->
-                    <article>
+                    <section>
                         <header>
-                            <h2><a href="#">Real-Time Ray Tracing<br />
-                            on Cortex-M7</a></h2>
+                            <h2>Real-Time Ray Tracing on Cortex-M7</h2>
+                            <p><strong>Tech Stack:</strong> C++, Arduino/Teensy</p>
                         </header>
-                        <p>Ported and optimized a ray-tracing engine to run on a Teensy 4.1 microcontroller (600MHz). 
-                        Addressed severe memory constraints and floating-point limitations to render 3D scenes 
-                        in real-time on an embedded target, demonstrating efficient firmware resource management.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/Nahjay/Teensy-Ray-Tracing" class="button">View Code</a></li>
+                        <p>Ported a computationally intensive ray tracing engine to the Teensy 4.1 microcontroller (ARM Cortex-M7), demonstrating optimization techniques for resource-constrained embedded systems.</p>
+                        <ul>
+                            <li><strong>Embedded Optimization:</strong> Optimized floating-point arithmetic and memory usage to run a full ray-tracing algorithm on a 600MHz microcontroller with limited SRAM.</li>
+                            <li><strong>Render Pipeline:</strong> Implemented sphere intersection logic, material diffusion, and camera rays within the constraints of an embedded runtime environment.</li>
+                            <li><strong>Performance Tuning:</strong> Tuned calculation precision and recursion depth to balance image fidelity with render time, proving the viability of complex graphics algorithms on bare-metal hardware.</li>
                         </ul>
-                    </article>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/Teensy-Ray-Tracing" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
+
+                    <hr />
 
                     <!-- Cache Analysis -->
-                    <article>
+                    <section>
                         <header>
-                            <h2><a href="#">Quantitative Analysis of<br />
-                            Cache Replacement Algorithms</a></h2>
+                            <h2>Quantitative Analysis of Cache Replacement Algorithms</h2>
+                            <p><strong>Tech Stack:</strong> C++, ChampSim, Python</p>
                         </header>
-                        <p>Conducted trace-driven simulation using ChampSim to analyze the performance trade-offs of 
-                        LRU vs. LFU replacement policies. Quantified the impact on hit rates and Average Memory 
-                        Access Time (AMAT) across 10 million instruction cycles to inform architectural design decisions.</p>
-                        <ul class="actions special">
-                            <li><a href="#" class="button">View Analysis</a></li>
+                        <p>Conducted a rigorous performance analysis of memory hierarchy designs using trace-driven simulation. This project explored the architectural trade-offs between cache size, associativity, and eviction policies.</p>
+                        <ul>
+                            <li><strong>Simulation Framework:</strong> Developed a custom C++ cache simulator compatible with ChampSim traces to model multi-level cache hierarchies.</li>
+                            <li><strong>Algorithm Comparison:</strong> Implemented and compared Least Recently Used (LRU) and Least Frequently Used (LFU) replacement policies. Analyzed their impact on Hit/Miss rates across diverse workload traces (10M+ instructions).</li>
+                            <li><strong>Data Analysis:</strong> Quantified the relationship between associativity and Average Memory Access Time (AMAT), generating data-driven insights into optimal cache configurations for specific access patterns.</li>
                         </ul>
-                    </article>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/Cache-Analysis" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
 
-                    <!-- Jetson Kernel Modules -->
-                    <article>
+                    <hr />
+
+                    <!-- Jetson Kernel -->
+                    <section>
                         <header>
-                            <h2><a href="#">Heterogeneous Computing<br />
-                            & Custom Kernel Modules</a></h2>
+                            <h2>Heterogeneous Computing & Custom Kernel Modules</h2>
+                            <p><strong>Tech Stack:</strong> C, CUDA, Linux Kernel API</p>
                         </header>
-                        <p>Developed custom Linux kernel modules for the NVIDIA Jetson Nano to interface with 
-                        userspace applications. Implemented a heterogeneous computing pipeline that offloads 
-                        image processing tasks to the GPU via CUDA while managing data transfer through character device drivers.</p>
-                        <ul class="actions special">
-                            <li><a href="#" class="button">View Project</a></li>
+                        <p>Developed a hybrid hardware-software solution on the NVIDIA Jetson Nano, interfacing user-space applications with custom kernel drivers and GPU acceleration.</p>
+                        <ul>
+                            <li><strong>Kernel Development:</strong> Wrote custom Linux character device drivers to manage data transfer between user space and kernel space, exposing hardware resources via standard file operations (open/read/write/ioctl).</li>
+                            <li><strong>CUDA Acceleration:</strong> Designed optimized CUDA kernels to offload intensive image processing tasks to the GPU, achieving significant speedup compared to CPU-only execution.</li>
+                            <li><strong>System Integration:</strong> Orchestrated the full data pipeline: loading image data via kernel module, passing it to the GPU memory space, executing parallel kernels, and retrieving results for display.</li>
                         </ul>
-                    </article>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/Jetson-Nano-Custom-Kernel-Modules" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
 
                 </section>
-
-                <!-- Footer -->
-                <footer>
-                   <!-- Pagination or extra links could go here -->
-                </footer>
 
             </div>
 
