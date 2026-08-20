@@ -1,0 +1,326 @@
+/*
+	Custom theme overrides — modern dark UI with gradient accents.
+	Loaded after main.css / noscript.css; keeps HTML5 UP's structure & layout,
+	restyles color, type, and adds motion/hover polish.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+	--accent-1: #7c5cff;
+	--accent-2: #22d3ee;
+	--gradient: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+	--bg-0: #080b14;
+	--bg-1: #0d1220;
+	--surface: #121a2c;
+	--surface-alt: #161f35;
+	--border: rgba(124, 92, 255, 0.18);
+	--text: #e7ebf5;
+	--text-muted: #93a0ba;
+}
+
+/* Base */
+
+	body {
+		background-color: var(--bg-0) !important;
+		background-image:
+			radial-gradient(circle at 12% 8%, rgba(124, 92, 255, 0.16), transparent 42%),
+			radial-gradient(circle at 88% 18%, rgba(34, 211, 238, 0.12), transparent 40%),
+			radial-gradient(circle at 50% 100%, rgba(124, 92, 255, 0.08), transparent 55%);
+		background-attachment: fixed;
+	}
+
+	body, input, select, textarea {
+		font-family: "Inter", "Source Sans Pro", Helvetica, sans-serif;
+		font-weight: 400;
+		color: var(--text);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+		letter-spacing: -0.01em;
+		color: var(--text) !important;
+	}
+
+	a {
+		color: var(--accent-2);
+	}
+
+		a:hover {
+			color: var(--accent-1) !important;
+		}
+
+	strong, b {
+		color: var(--text);
+	}
+
+/* Header / logo */
+
+	#header {
+		background: transparent;
+	}
+
+		#header .logo {
+			border-color: rgba(124, 92, 255, 0.55) !important;
+			background: rgba(18, 26, 44, 0.55);
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+			border-radius: 999px;
+			font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+			background-image: var(--gradient);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+			#header .logo:hover {
+				border-color: var(--accent-2) !important;
+				-webkit-text-fill-color: transparent;
+				opacity: 0.85;
+			}
+
+		#header a:hover {
+			color: var(--accent-2) !important;
+		}
+
+/* Nav */
+
+	#nav {
+		background: rgba(13, 18, 32, 0.65) !important;
+		border: 1px solid var(--border);
+		border-radius: 1rem;
+		-webkit-backdrop-filter: blur(14px);
+		backdrop-filter: blur(14px);
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+	}
+
+		#nav ul.links {
+			font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+			font-weight: 600;
+		}
+
+		#nav ul.links li a {
+			position: relative;
+		}
+
+			#nav ul.links li a:hover {
+				background-color: transparent !important;
+				color: var(--accent-2) !important;
+			}
+
+		#nav ul.links li.active {
+			background: transparent;
+			background-image: var(--gradient);
+			border-radius: 999px;
+			margin: 0.6rem 0.15rem;
+		}
+
+			#nav ul.links li.active a {
+				color: #ffffff !important;
+			}
+
+				#nav ul.links li.active a:hover {
+					color: #ffffff !important;
+				}
+
+		#nav ul.icons li a.icon:hover:before {
+			color: var(--accent-2);
+		}
+
+/* Intro (index hero) */
+
+	#intro {
+		background: transparent;
+	}
+
+		#intro h1 {
+			font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+			background-image: var(--gradient);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		#intro .button {
+			background-image: var(--gradient) !important;
+			color: #ffffff !important;
+		}
+
+/* Main surface */
+
+	#main {
+		background-color: var(--surface) !important;
+		border: 1px solid var(--border);
+		border-radius: 1.5rem;
+		box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+		overflow: hidden;
+	}
+
+		#main > * {
+			border-top-color: var(--border) !important;
+		}
+
+		#main > .post header.major > h1,
+		#main > .post header.major h2 {
+			background-image: var(--gradient);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		#main hr {
+			border-bottom-color: var(--border) !important;
+		}
+
+/* Post cards / project grid */
+
+	#main > .posts > article {
+		border-color: var(--border) !important;
+		transition: background-color 0.25s ease, transform 0.25s ease;
+	}
+
+		#main > .posts > article:hover {
+			background-color: var(--surface-alt);
+			transform: translateY(-4px);
+		}
+
+		#main > .posts > article h2 a,
+		#main > .post header.major h2 a {
+			color: var(--text);
+		}
+
+			#main > .posts > article h2 a:hover {
+				color: var(--accent-2) !important;
+			}
+
+	.image, .image img {
+		border-radius: 0.75rem;
+	}
+
+		.image.fit img {
+			transition: transform 0.4s ease;
+		}
+
+		#main > .posts > article:hover .image.fit img {
+			transform: scale(1.03);
+		}
+
+/* Buttons */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		background-image: var(--gradient);
+		border-radius: 999px;
+		color: #ffffff !important;
+		font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+		box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
+		transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 14px 32px rgba(34, 211, 238, 0.4);
+			opacity: 0.95;
+		}
+
+		.button.icon.solo:before {
+			color: #ffffff;
+		}
+
+/* Body copy */
+
+	#main p, #main li {
+		color: var(--text-muted);
+	}
+
+	#main blockquote {
+		border-left-color: var(--accent-1) !important;
+		color: var(--text);
+	}
+
+	#main code {
+		background: rgba(124, 92, 255, 0.12) !important;
+		border-color: var(--border) !important;
+		color: var(--accent-2);
+	}
+
+/* Mobile nav panel */
+
+	#navPanelToggle {
+		background-color: rgba(18, 26, 44, 0.85) !important;
+		color: #ffffff !important;
+		border-radius: 999px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+	}
+
+		#navPanelToggle.alt {
+			background-color: rgba(18, 26, 44, 0.85) !important;
+			color: #ffffff !important;
+		}
+
+	#navPanel {
+		background: var(--bg-1) !important;
+		color: var(--text) !important;
+	}
+
+		#navPanel .links li {
+			border-top-color: var(--border) !important;
+		}
+
+		#navPanel .links li a {
+			color: var(--text) !important;
+		}
+
+			#navPanel .links li a:hover {
+				color: var(--accent-2) !important;
+			}
+
+		#navPanel h1, #navPanel h2, #navPanel h3,
+		#navPanel h4, #navPanel h5, #navPanel h6 {
+			color: var(--text) !important;
+		}
+
+/* Footer */
+
+	#footer {
+		background: var(--bg-1) !important;
+		border-top: 1px solid var(--border);
+	}
+
+		#footer h3 {
+			font-family: "Space Grotesk", "Source Sans Pro", Helvetica, sans-serif;
+			color: var(--text);
+		}
+
+		#footer a {
+			color: var(--text-muted);
+		}
+
+			#footer a:hover {
+				color: var(--accent-2) !important;
+			}
+
+		#footer ul.icons.alt li .icon:before {
+			box-shadow: inset 0 0 0 2px var(--border) !important;
+			transition: box-shadow 0.2s ease, color 0.2s ease;
+		}
+
+			#footer ul.icons.alt li a.icon:hover:before {
+				box-shadow: inset 0 0 0 2px var(--accent-2) !important;
+			}
+
+	#copyright {
+		background: var(--bg-1) !important;
+		color: var(--text-muted);
+	}
+
+		#copyright a {
+			color: var(--text-muted);
+		}
