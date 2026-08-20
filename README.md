@@ -6,27 +6,11 @@ Welcome to my GitHub portfolio! I'm Nahjay Battieste, an aspiring Computer Engin
 
 ## About Me
 
-I'm currently pursuing an Associate in Arts degree at Broward College with a major in Computer Engineering, aiming to transfer to the University of Florida in August 2024. With an overall GPA of 3.93, I'm committed to academic excellence while actively applying my knowledge in practical projects.
+I'm currently pursuing an undergraduate degree in Computer Engineering at the University of Florida. I'm committed to academic excellence while actively applying my knowledge in practical projects.
 
 ## My Projects
 
-### Jetson Nano Custom Kernel Modules
-- Description: Unified CPU-based Linux kernel modules and GPU-accelerated CUDA kernels into a comprehensive firmware solution for efficient .ppm image manipulation on the NVIDIA Jetson Nano, optimizing performance through parallel processing and seamless integration.
-- Skills Demonstrated: C/C++ programming, Linux kernel module development, CUDA kernel development, and parallel processing.
-
-### Arduino Weather Station
-- Description: A fully functional weather station built on Arduino, offering real-time monitoring of environmental conditions.
-- Skills Demonstrated: Sensor integration, real-time data processing, and user-friendly interface design, RESTFUL API desig, and database integration.
-
-### Image Recognition Machine Learning Model
-- Description: Designed and trained a machine learning model to be able to recognize images of 10 different classifications  (CIFAR-10 Dataset) passed into a web interface.
-- Skills Demonstrated: Full project lifecycle management, proper application of machine learning algorithms, web interface design, and evulation of model parameters.
-
-### Raspberry PI Gesture-Controlled System
-- Description: A comprehensive Raspberry PI system featuring gesture-based controls and a mobile app interface.
-- Skills Demonstrated: Full-stack development, hardware integration, and real-time computer vision processing.
-
-Feel free to explore my projects in more detail by visiting the respective project links in this repository. Your feedback and suggestions are always welcome as I continue to learn, grow, and innovate.
+I have worked on numerous projects throughout my career so far. Feel free to explore my projects in more detail by visiting the respective project links in this repository. Your feedback and suggestions are always welcome as I continue to learn, grow, and innovate.
 
 ## Contact Me
 
