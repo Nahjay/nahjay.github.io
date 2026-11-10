@@ -67,6 +67,41 @@
 
                     <hr />
 
+                    <!-- RAVEN -->
+                    <section id="raven">
+                        <header>
+                            <h2>RAVEN: RISC-V-Controlled FPGA Neural Processing Unit</h2>
+                            <div class="tag-list card-tags proj-tags"><span class="tag">SystemVerilog</span><span class="tag">C</span><span class="tag">Python</span><span class="tag">SystemRDL</span><span class="tag">Vivado</span><span class="tag">Questa</span></div>
+                        </header>
+                        <p>Led control and runtime for a 5-person team building an INT8 NPU on the Ultra96-V2 (8×8 MAC array, 6.4 GMAC/s peak, 100 MHz timing closure), integrating a MicroBlaze V RISC-V core, AXI4-Lite interconnect, AXI DMA, and interrupt controller.</p>
+                        <ul>
+                            <li><strong>Control Plane:</strong> Designed a SystemRDL-generated 36-register CSR block (RTL, C headers, docs), a depth-4 command queue, and a control FSM with bank interlock, watchdog, and 11 error codes.</li>
+                            <li><strong>Bare-Metal Runtime:</strong> Built a ≤48 KiB C runtime (HAL, drivers, model loader) running AD01, DS-CNN, and MobileNetV1-VWW from one binary.</li>
+                            <li><strong>Performance &amp; Verification:</strong> Overlapped DMA and compute across ping-pong banks, cutting command issue from 22 MMIO writes to ~5 per tile (≤2 µs interrupt-to-ISR latency); verified with a 657-check testbench and on-board fault injection (0 mismatches vs. TFLite-Micro INT8 reference).</li>
+                        </ul>
+                    </section>
+
+                    <hr />
+
+                    <!-- BNN Accelerator -->
+                    <section id="bnn">
+                        <header>
+                            <h2>BNN FPGA Accelerator (UF/Apple-Sponsored Hardware Design Contest)</h2>
+                            <div class="tag-list card-tags proj-tags"><span class="tag">SystemVerilog</span><span class="tag">AXI4-Stream</span><span class="tag">Xilinx UltraScale</span></div>
+                        </header>
+                        <p>Designed and optimized a parameterized binary neural network classifier for MNIST digit recognition, targeting the SFC 784→256→256→10 topology.</p>
+                        <ul>
+                            <li><strong>Timing Optimization:</strong> Reached 670.69 MHz fMax on Xilinx UltraScale via pipelining, retiming, and LUT reduction.</li>
+                            <li><strong>RTL Architecture:</strong> Full pipelined RTL with AXI4-Stream config, input, and output interfaces, a custom configuration manager, neuron processors (PN=8, PW=8), and a memory hierarchy across 3 hidden/output layers.</li>
+                            <li><strong>Verification:</strong> Parameterized testbench with functional coverage, assertions, and a behavioral reference model; 100% pass rate across 50 test cases with 21,545 outputs/sec average throughput.</li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="https://github.com/Nahjay/bnn_fcc_contest" class="button primary">View Codebase</a></li>
+                        </ul>
+                    </section>
+
+                    <hr />
+
                     <!-- MIPS Processor -->
                     <section id="mips">
                         <header>
@@ -154,7 +189,7 @@
                     </section>
                     <section>
                         <h3>Phone</h3>
-                        <p><a href="#">954-494-7138</a></p>
+                        <p><a href="tel:+19544947138">954-494-7138</a></p>
                     </section>
                     <section>
                         <h3>Email</h3>
