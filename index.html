@@ -64,7 +64,7 @@
                         & Memory Hierarchy Design</a></h2>
                         <p>Designed a high-throughput hardware accelerator for Convolutional Neural Networks on an FPGA. 
                         Architected a custom sliding-window memory buffer to minimize off-chip bandwidth and implemented a 
-                        fully pipelined RGB datapath in VHDL, achieving single-cycle pixel processing throughput.</p>
+                        fully pipelined RGB datapath in VHDL, achieving single-cycle pixel processing throughput. A personal project that provided much of the framework for my SmartSystems Lab research accelerator.</p>
                         <div class="tag-list card-tags">
                             <span class="tag">VHDL</span>
                             <span class="tag">Python</span>
@@ -141,12 +141,12 @@
                     <!-- Teensy Ray Tracing -->
                     <article>
                         <header>
-                            <h2><a href="generic.html#raytracing">Real-Time Ray Tracing<br />
+                            <h2><a href="generic.html#raytracing">Ray Tracing<br />
                             on Cortex-M7</a></h2>
                         </header>
                         <p>Ported and optimized a ray-tracing engine to run on a Teensy 4.1 microcontroller (600MHz). 
-                        Addressed severe memory constraints and floating-point limitations to render 3D scenes 
-                        in real-time on an embedded target, demonstrating efficient firmware resource management.</p>
+                        Worked within tight memory and single-precision floating-point limits to render 3D sphere scenes 
+                        to an ILI9341 display from an embedded target, demonstrating efficient firmware resource management.</p>
                         <div class="tag-list card-tags">
                             <span class="tag">C++</span>
                             <span class="tag">Arduino / Teensy</span>
@@ -162,9 +162,9 @@
                             <h2><a href="generic.html#cache">Quantitative Analysis of<br />
                             Cache Replacement Algorithms</a></h2>
                         </header>
-                        <p>Conducted trace-driven simulation using ChampSim to analyze the performance trade-offs of 
-                        LRU vs. LFU replacement policies. Quantified the impact on hit rates and Average Memory 
-                        Access Time (AMAT) across 10 million instruction cycles to inform architectural design decisions.</p>
+                        <p>Built a multi-threaded C++ cache simulator driven by ChampSim traces to analyze the performance 
+                        trade-offs of LRU vs. LFU replacement policies, quantifying the impact on hit rates across 
+                        cache sizes and workloads to inform architectural design decisions.</p>
                         <div class="tag-list card-tags">
                             <span class="tag">C++</span>
                             <span class="tag">ChampSim</span>
@@ -181,9 +181,9 @@
                             <h2><a href="generic.html#jetson">Heterogeneous Computing<br />
                             & Custom Kernel Modules</a></h2>
                         </header>
-                        <p>Developed custom Linux kernel modules for the NVIDIA Jetson Nano to interface with 
-                        userspace applications. Implemented a heterogeneous computing pipeline that offloads 
-                        image processing tasks to the GPU via CUDA while managing data transfer through character device drivers.</p>
+                        <p>Developed a custom Linux kernel module for the NVIDIA Jetson Nano that exposes an ioctl 
+                        interface to userspace applications, and paired it with a CUDA kernel that offloads 
+                        image processing to the GPU, comparing CPU-side and GPU-side execution.</p>
                         <div class="tag-list card-tags">
                             <span class="tag">C</span>
                             <span class="tag">CUDA</span>

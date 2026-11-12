@@ -55,6 +55,7 @@
                             <div class="tag-list card-tags proj-tags"><span class="tag">VHDL</span><span class="tag">Python</span><span class="tag">Vivado</span><span class="tag">ModelSim</span></div>
                         </header>
                         <p>Designed a fully pipelined hardware accelerator for 3×3 RGB convolution operations, targeting high-throughput image processing applications on FPGA fabric. The architecture prioritizes memory bandwidth efficiency through a custom buffering strategy.</p>
+                        <p><em>Note: This was a personal project, separate from the CNN accelerator I developed for my research at the SmartSystems Lab. It provided much of the framework for the research design.</em></p>
                         <ul>
                             <li><strong>Pipelined Datapath:</strong> Implemented a high-performance datapath achieving one output pixel per clock cycle (after initial pipeline fill latency), significantly outperforming sequential CPU execution for identical workloads.</li>
                             <li><strong>Custom Memory Architecture:</strong> Architected a "Sliding Window" buffer and packed RGB memory format. This design minimizes off-chip memory access overhead by reusing pixel data across convolution windows, reducing bandwidth requirements and simplifying address generation logic.</li>
@@ -127,14 +128,14 @@
                     <!-- Teensy Ray Tracing -->
                     <section id="raytracing">
                         <header>
-                            <h2>Real-Time Ray Tracing on Cortex-M7</h2>
+                            <h2>Ray Tracing on Cortex-M7</h2>
                             <div class="tag-list card-tags proj-tags"><span class="tag">C++</span><span class="tag">Arduino / Teensy</span></div>
                         </header>
-                        <p>Ported a computationally intensive ray tracing engine to the Teensy 4.1 microcontroller (ARM Cortex-M7), demonstrating optimization techniques for resource-constrained embedded systems.</p>
+                        <p>Ported a computationally intensive ray tracing engine to the Teensy 4.1 microcontroller (ARM Cortex-M7), rendering to an ILI9341 display and demonstrating optimization techniques for resource-constrained embedded systems.</p>
                         <ul>
-                            <li><strong>Embedded Optimization:</strong> Optimized floating-point arithmetic and memory usage to run a full ray-tracing algorithm on a 600MHz microcontroller with limited SRAM.</li>
+                            <li><strong>Embedded Optimization:</strong> Used single-precision floats, object reuse, and reduced scene complexity to run a full ray-tracing algorithm on a 600 MHz microcontroller with limited RAM.</li>
                             <li><strong>Render Pipeline:</strong> Implemented sphere intersection logic, material diffusion, and camera rays within the constraints of an embedded runtime environment.</li>
-                            <li><strong>Performance Tuning:</strong> Tuned calculation precision and recursion depth to balance image fidelity with render time, proving the viability of complex graphics algorithms on bare-metal hardware.</li>
+                            <li><strong>Performance Tuning:</strong> Tuned calculation precision and recursion depth to balance image fidelity with render time, demonstrating the viability of complex graphics algorithms on a microcontroller.</li>
                         </ul>
                         <ul class="actions">
                             <li><a href="https://github.com/Nahjay/Teensy-Ray-Tracing" class="button primary">View Codebase</a></li>
@@ -149,11 +150,11 @@
                             <h2>Quantitative Analysis of Cache Replacement Algorithms</h2>
                             <div class="tag-list card-tags proj-tags"><span class="tag">C++</span><span class="tag">ChampSim</span><span class="tag">Python</span></div>
                         </header>
-                        <p>Conducted a rigorous performance analysis of memory hierarchy designs using trace-driven simulation. This project explored the architectural trade-offs between cache size, associativity, and eviction policies.</p>
+                        <p>Conducted a performance analysis of cache replacement policies using trace-driven simulation, exploring the trade-offs between cache size and eviction policy on real CPU traces.</p>
                         <ul>
-                            <li><strong>Simulation Framework:</strong> Developed a custom C++ cache simulator compatible with ChampSim traces to model multi-level cache hierarchies.</li>
-                            <li><strong>Algorithm Comparison:</strong> Implemented and compared Least Recently Used (LRU) and Least Frequently Used (LFU) replacement policies. Analyzed their impact on Hit/Miss rates across diverse workload traces (10M+ instructions).</li>
-                            <li><strong>Data Analysis:</strong> Quantified the relationship between associativity and Average Memory Access Time (AMAT), generating data-driven insights into optimal cache configurations for specific access patterns.</li>
+                            <li><strong>Simulation Framework:</strong> Developed a custom multi-threaded C++ cache simulator that parses ChampSim traces and runs LRU and LFU simulations in parallel, using O(1) hash-map and linked-list implementations.</li>
+                            <li><strong>Algorithm Comparison:</strong> Implemented and compared Least Recently Used (LRU) and Least Frequently Used (LFU) replacement policies. Analyzed their impact on hit/miss rates across configurable cache sizes on ChampSim workload traces.</li>
+                            <li><strong>Data Analysis:</strong> Compared hit rates across cache sizes and workloads to draw data-driven conclusions about which replacement policy suits which access patterns.</li>
                         </ul>
                         <ul class="actions">
                             <li><a href="https://github.com/Nahjay/Cache-Analysis" class="button primary">View Codebase</a></li>
@@ -170,9 +171,9 @@
                         </header>
                         <p>Developed a hybrid hardware-software solution on the NVIDIA Jetson Nano, interfacing user-space applications with custom kernel drivers and GPU acceleration.</p>
                         <ul>
-                            <li><strong>Kernel Development:</strong> Wrote custom Linux character device drivers to manage data transfer between user space and kernel space, exposing hardware resources via standard file operations (open/read/write/ioctl).</li>
-                            <li><strong>CUDA Acceleration:</strong> Designed optimized CUDA kernels to offload intensive image processing tasks to the GPU, achieving significant speedup compared to CPU-only execution.</li>
-                            <li><strong>System Integration:</strong> Orchestrated the full data pipeline: loading image data via kernel module, passing it to the GPU memory space, executing parallel kernels, and retrieving results for display.</li>
+                            <li><strong>Kernel Development:</strong> Wrote a custom Linux kernel module that registers a misc character device and exposes an ioctl interface, receiving an image path from user space and modifying the image data in kernel space.</li>
+                            <li><strong>CUDA Acceleration:</strong> Wrote a CUDA kernel that offloads per-pixel image processing to the GPU, mirroring the CPU-side kernel-module implementation for comparison.</li>
+                            <li><strong>System Integration:</strong> Built a user-space CUDA application that loads image data, copies it to GPU memory, executes the parallel kernel, and copies results back, alongside the kernel-module path on the Jetson Nano.</li>
                         </ul>
                         <ul class="actions">
                             <li><a href="https://github.com/Nahjay/Jetson-Nano-Custom-Kernel-Modules" class="button primary">View Codebase</a></li>
