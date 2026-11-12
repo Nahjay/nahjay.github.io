@@ -1,248 +1,450 @@
-<!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <title>Nahjay Battieste - Project Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/theme.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nahjay Battieste — Hardware Portfolio</title>
+  <meta name="description" content="Nahjay Battieste — Computer Engineering at the University of Florida. FPGA design, computer architecture, and embedded firmware. Three-time NVIDIA GPU firmware intern." />
+  <meta name="theme-color" content="#08090a" />
+  <meta property="og:title" content="Nahjay Battieste — Hardware Portfolio" />
+  <meta property="og:description" content="FPGA design, computer architecture, and embedded firmware. Computer Engineering at UF, three-time NVIDIA GPU firmware intern." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nahjay.github.io/" />
+  <link rel="canonical" href="https://nahjay.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0e'/%3E%3Cpath d='M5 21h5V11h6v10h6V11h5' fill='none' stroke='%23c8ff3d' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
 
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
-            <!-- Intro -->
-            <div id="intro">
-                <h1>Nahjay Battieste<br />
-                Hardware Portfolio</h1>
-                <p>Computer Engineering Undergraduate specializing in FPGA Design, Computer Architecture, and Embedded Firmware.</p>
-                <div class="tag-list intro-tags">
-                    <span class="tag">VHDL</span>
-                    <span class="tag">SystemVerilog</span>
-                    <span class="tag">CUDA</span>
-                    <span class="tag">C / C++</span>
-                    <span class="tag">Rust</span>
-                </div>
-                <ul class="actions">
-                    <li><a href="assets/Nahjay_Resume_V3.pdf" target="_blank" class="button primary">View Resume</a></li>
-                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-                </ul>
-            </div>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.760-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.31.47-2.38 1.24-3.220-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.410v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M4 21h5V11h7v10h7V11h5"/></symbol>
+  </svg>
 
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo">My Digital Odyssey</a>
-            </header>
+  <a class="skip" href="#work">Skip to content</a>
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li class="active"><a href="index.html">Projects</a></li>
-                    <li><a href="generic.html">Project Details</a></li>
-                    <li><a href="elements.html">About Me</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                </ul>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/nahjay-battieste-a84655224" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/Nahjay" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </nav>
+  <!-- Nav -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Nahjay Battieste — home">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-wave" /></svg>
+        <span>nahjay<span class="brand-dim">.battieste</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="nav-hide-sm"><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-sm btn-accent" href="assets/Nahjay_Resume_V3.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </nav>
 
-            <!-- Main -->
-            <div id="main">
+  <main id="top">
 
-                <!-- Featured Post -->
-                <article class="post featured">
-                    <header class="major">
-                        <h2><a href="generic.html#cnn">FPGA-Based CNN Accelerator<br />
-                        & Memory Hierarchy Design</a></h2>
-                        <p>Designed a high-throughput hardware accelerator for Convolutional Neural Networks on an FPGA. 
-                        Architected a custom sliding-window memory buffer to minimize off-chip bandwidth and implemented a 
-                        fully pipelined RGB datapath in VHDL, achieving single-cycle pixel processing throughput. A personal project that provided much of the framework for my SmartSystems Lab research accelerator.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">VHDL</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Vivado</span>
-                            <span class="tag">ModelSim</span>
-                        </div>
-                    </header>
-                    <ul class="actions special">
-                        <li><a href="generic.html#cnn" class="button large">See More</a></li>
-                    </ul>
-                </article>
-
-                <!-- Posts -->
-                <section class="posts">
-                    
-                    <!-- RAVEN NPU -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#raven">RAVEN: RISC-V-Controlled<br />
-                            FPGA Neural Processing Unit</a></h2>
-                        </header>
-                        <p>Led control and runtime for a 5-person team building an INT8 NPU on the Ultra96-V2
-                        (8×8 MAC array, 6.4 GMAC/s peak). Designed a SystemRDL-generated CSR block and control FSM in SystemVerilog
-                        and wrote a bare-metal C runtime running three neural networks from a single binary.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">SystemVerilog</span>
-                            <span class="tag">C</span>
-                            <span class="tag">SystemRDL</span>
-                            <span class="tag">Vivado</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#raven" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- BNN Accelerator -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#bnn">BNN FPGA Accelerator<br />
-                            (UF/Apple Design Contest)</a></h2>
-                        </header>
-                        <p>Optimized a parameterized binary neural network accelerator to 670.69 MHz fMax on Xilinx UltraScale
-                        through pipelining, retiming, and LUT reduction. Verified with a coverage-driven SystemVerilog testbench
-                        achieving a 100% pass rate across 50 test cases.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">SystemVerilog</span>
-                            <span class="tag">AXI4-Stream</span>
-                            <span class="tag">UltraScale</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#bnn" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- MIPS Processor -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#mips">32-bit MIPS<br />
-                            Microarchitecture</a></h2>
-                        </header>
-                        <p>Designed the microarchitecture and RTL for a 5-stage pipelined MIPS processor. 
-                        Implemented hardware-based hazard detection and a data forwarding unit to resolve 
-                        control and data dependencies without software bubbles, ensuring optimal pipeline efficiency.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">VHDL</span>
-                            <span class="tag">Assembly</span>
-                            <span class="tag">Quartus</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#mips" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- Teensy Ray Tracing -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#raytracing">Ray Tracing<br />
-                            on Cortex-M7</a></h2>
-                        </header>
-                        <p>Ported and optimized a ray-tracing engine to run on a Teensy 4.1 microcontroller (600MHz). 
-                        Worked within tight memory and single-precision floating-point limits to render 3D sphere scenes 
-                        to an ILI9341 display from an embedded target, demonstrating efficient firmware resource management.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">C++</span>
-                            <span class="tag">Arduino / Teensy</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#raytracing" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- Cache Analysis -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#cache">Quantitative Analysis of<br />
-                            Cache Replacement Algorithms</a></h2>
-                        </header>
-                        <p>Built a multi-threaded C++ cache simulator driven by ChampSim traces to analyze the performance 
-                        trade-offs of LRU vs. LFU replacement policies, quantifying the impact on hit rates across 
-                        cache sizes and workloads to inform architectural design decisions.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">C++</span>
-                            <span class="tag">ChampSim</span>
-                            <span class="tag">Python</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#cache" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                    <!-- Jetson Kernel Modules -->
-                    <article>
-                        <header>
-                            <h2><a href="generic.html#jetson">Heterogeneous Computing<br />
-                            & Custom Kernel Modules</a></h2>
-                        </header>
-                        <p>Developed a custom Linux kernel module for the NVIDIA Jetson Nano that exposes an ioctl 
-                        interface to userspace applications, and paired it with a CUDA kernel that offloads 
-                        image processing to the GPU, comparing CPU-side and GPU-side execution.</p>
-                        <div class="tag-list card-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">CUDA</span>
-                            <span class="tag">Linux Kernel API</span>
-                        </div>
-                        <ul class="actions special">
-                            <li><a href="generic.html#jetson" class="button">See More</a></li>
-                        </ul>
-                    </article>
-
-                </section>
-
-                <!-- Footer -->
-                <footer>
-                   <!-- Pagination or extra links could go here -->
-                </footer>
-
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section class="split contact">
-                    <section class="alt">
-                        <h3>Location</h3>
-                        <p>Gainesville, Florida</p>
-                    </section>
-                    <section>
-                        <h3>Phone</h3>
-                        <p><a href="tel:+19544947138">954-494-7138</a></p>
-                    </section>
-                    <section>
-                        <h3>Email</h3>
-                        <p><a href="mailto:nahjaybattieste@gmail.com">nahjaybattieste@gmail.com</a></p>
-                    </section>
-                    <section>
-                        <h3>Social</h3>
-                        <ul class="icons alt">
-                            <li><a href="https://www.linkedin.com/in/nahjay-battieste-a84655224" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="https://github.com/Nahjay" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                        </ul>
-                    </section>
-                </section>
-            </footer>
-
-            <!-- Copyright -->
-            <div id="copyright">
-                <ul><li>&copy; Nahjay Battieste</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-            </div>
-
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Computer Engineering · University of Florida · Class of ’27</p>
+          <h1 class="hero-title">Nahjay<br />Battieste</h1>
+          <p class="hero-lede">I design <em>FPGA accelerators</em>, processor microarchitecture, and the low-level firmware that brings hardware to life.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="assets/Nahjay_Resume_V3.pdf" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-doc" /></svg>View resume
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/Nahjay" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-gh" /></svg>GitHub
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/nahjay-battieste-a84655224" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-li" /></svg>LinkedIn
+            </a>
+          </div>
         </div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+        <figure class="scope" aria-hidden="true">
+          <div class="scope-bar">
+            <span class="scope-dots"><i></i><i></i><i></i></span>
+            <span class="scope-file">tb_top · waveform</span>
+            <span class="scope-time">t = <b id="tcount">0</b> ns</span>
+          </div>
+          <div class="scope-body">
+            <ul class="scope-labels">
+              <li>clk</li><li>valid</li><li>ready</li><li>data[7:0]</li><li>acc[31:0]</li>
+            </ul>
+            <div class="scope-wave">
+              <svg id="wave" height="170"></svg>
+              <span class="scope-cursor"></span>
+            </div>
+          </div>
+        </figure>
+      </div>
 
-    </body>
+      <div class="container">
+        <dl class="stats" data-reveal>
+          <div class="stat"><dt>NVIDIA GPU firmware internships</dt><dd>3<span>×</span></dd></div>
+          <div class="stat"><dt>BNN accelerator fMax on UltraScale</dt><dd>670.69<span>MHz</span></dd></div>
+          <div class="stat"><dt>RAVEN NPU peak throughput</dt><dd>6.4<span>GMAC/s</span></dd></div>
+          <div class="stat"><dt>GPA, B.S. Computer Engineering</dt><dd>3.93</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- Work -->
+    <section class="section" id="work" aria-labelledby="work-h">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>01</span> Selected work</p>
+          <h2 id="work-h">Things I’ve <em>built.</em></h2>
+          <p class="section-sub">RTL, accelerators, and firmware. Every project links to its repository, where you’ll find the block diagrams, waveforms, and source.</p>
+        </div>
+
+        <div class="projects-featured">
+
+          <article class="project project-lg" id="raven" data-reveal>
+            <div class="project-top">
+              <span class="project-idx">P.01</span>
+              <span class="project-meta">Team of 5 · Control &amp; runtime lead</span>
+            </div>
+            <h3>RAVEN <em>— RISC-V-controlled FPGA neural processing unit</em></h3>
+            <p>Led control and runtime for a 5-person team building an INT8 NPU on the Ultra96-V2, integrating a MicroBlaze V RISC-V core, AXI4-Lite interconnect, AXI DMA, and interrupt controller.</p>
+            <dl class="specs">
+              <div><dt>Array</dt><dd>8×8 MAC</dd></div>
+              <div><dt>Peak</dt><dd>6.4 GMAC/s</dd></div>
+              <div><dt>Timing</dt><dd>100 MHz</dd></div>
+              <div><dt>Verify</dt><dd>657 checks</dd></div>
+            </dl>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Control plane.</strong> SystemRDL-generated 36-register CSR block (RTL, C headers, docs), a depth-4 command queue, and a control FSM with bank interlock, watchdog, and 11 error codes.</li>
+                <li><strong>Bare-metal runtime.</strong> A ≤48 KiB C runtime (HAL, drivers, model loader) running AD01, DS-CNN, and MobileNetV1-VWW from one binary.</li>
+                <li><strong>Performance &amp; verification.</strong> Overlapped DMA and compute across ping-pong banks, cutting command issue from 22 MMIO writes to ~5 per tile (≤2 µs interrupt-to-ISR latency). Verified with a 657-check testbench and on-board fault injection: 0 mismatches vs. the TFLite-Micro INT8 reference.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>SystemVerilog</li><li>C</li><li>Python</li><li>SystemRDL</li><li>Vivado</li><li>Questa</li></ul>
+              <a class="repo" href="https://github.com/michaelgirg/raven" target="_blank" rel="noopener">Repository<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="project project-lg" id="bnn" data-reveal>
+            <div class="project-top">
+              <span class="project-idx">P.02</span>
+              <span class="project-meta">UF / Apple-sponsored hardware design contest</span>
+            </div>
+            <h3>BNN FPGA accelerator <em>— binary neural network for MNIST</em></h3>
+            <p>Designed and optimized a parameterized, pipelined binary neural network classifier targeting the SFC 784→256→256→10 topology, with AXI4-Stream config, input, and output interfaces.</p>
+            <dl class="specs">
+              <div><dt>fMax</dt><dd>670.69 MHz</dd></div>
+              <div><dt>Target</dt><dd>UltraScale</dd></div>
+              <div><dt>Throughput</dt><dd>21,545 out/s</dd></div>
+              <div><dt>Tests</dt><dd>50 / 50 pass</dd></div>
+            </dl>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Timing optimization.</strong> Reached 670.69 MHz fMax on Xilinx UltraScale via pipelining, retiming, and LUT reduction.</li>
+                <li><strong>RTL architecture.</strong> Custom configuration manager, neuron processors (PN=8, PW=8), and a memory hierarchy across 3 hidden/output layers.</li>
+                <li><strong>Verification.</strong> Parameterized testbench with functional coverage, assertions, and a behavioral reference model: 100% pass rate across 50 test cases at 21,545 outputs/sec average throughput.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>SystemVerilog</li><li>AXI4-Stream</li><li>Xilinx UltraScale</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/bnn_fcc_contest" target="_blank" rel="noopener">Repository<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="project project-lg" id="cnn" data-reveal>
+            <div class="project-top">
+              <span class="project-idx">P.03</span>
+              <span class="project-meta">Personal project</span>
+            </div>
+            <h3>FPGA CNN accelerator <em>— pipelined 3×3 RGB convolution</em></h3>
+            <p>A fully pipelined accelerator for 3×3 RGB convolution with a custom sliding-window buffer and packed RGB memory format, producing one output pixel per clock after pipeline fill.</p>
+            <p class="note">A personal project, separate from the CNN accelerator I developed for my research at the SmartSystems Lab. It provided much of the framework for the research design.</p>
+            <dl class="specs">
+              <div><dt>Kernel</dt><dd>3×3 RGB</dd></div>
+              <div><dt>Rate</dt><dd>1 px / cycle</dd></div>
+              <div><dt>Golden</dt><dd>Python model</dd></div>
+              <div><dt>HDL</dt><dd>VHDL</dd></div>
+            </dl>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Pipelined datapath.</strong> One output pixel per clock cycle after the initial pipeline fill latency.</li>
+                <li><strong>Custom memory architecture.</strong> A sliding-window buffer and packed RGB format reuse pixel data across convolution windows, cutting memory accesses and simplifying address generation.</li>
+                <li><strong>Verification.</strong> A cycle-accurate Python reference model generates golden vectors; a VHDL testbench with valid-bit tracking checks data integrity across every pipeline stage.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>VHDL</li><li>Python</li><li>Vivado</li><li>ModelSim</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/CNN-Accelerator" target="_blank" rel="noopener">Repository<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project" id="mips" data-reveal>
+            <div class="project-top"><span class="project-idx">P.04</span><span class="project-meta">Architecture</span></div>
+            <h3>32-bit MIPS microarchitecture</h3>
+            <p>A 5-stage pipelined MIPS processor with a hardware forwarding unit and hazard detection unit that resolve data and control dependencies without software-inserted bubbles.</p>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>5-stage pipeline.</strong> Classic fetch, decode, execute, memory, write-back structure.</li>
+                <li><strong>Hazard resolution.</strong> Forwarding resolves RAW dependencies; the hazard detection unit stalls only when needed (load-use); taken branches flush the front end.</li>
+                <li><strong>Integration.</strong> Word-aligned instruction and data memories, register file, and a custom ALU for arithmetic, logical, and branch operations.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>VHDL</li><li>Assembly</li><li>Quartus</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/MIPS-32" target="_blank" rel="noopener">Repo<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="project" id="cache" data-reveal>
+            <div class="project-top"><span class="project-idx">P.05</span><span class="project-meta">Architecture</span></div>
+            <h3>Cache replacement analysis</h3>
+            <p>A multi-threaded C++ cache simulator driven by ChampSim traces, comparing LRU and LFU replacement policies across cache sizes and workloads.</p>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Simulator.</strong> Parses ChampSim traces and runs LRU and LFU simulations in parallel, using O(1) hash-map and linked-list implementations.</li>
+                <li><strong>Comparison.</strong> Measures hit/miss rates across configurable cache sizes on real CPU workload traces.</li>
+                <li><strong>Analysis.</strong> Compares hit rates across sizes and workloads to show which policy suits which access patterns.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>C++</li><li>ChampSim traces</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/Cache-Analysis" target="_blank" rel="noopener">Repo<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="project" id="jetson" data-reveal>
+            <div class="project-top"><span class="project-idx">P.06</span><span class="project-meta">Systems</span></div>
+            <h3>Jetson Nano kernel module + CUDA</h3>
+            <p>A custom Linux kernel module exposing an ioctl interface to user space, paired with a CUDA kernel that offloads the same image processing to the GPU.</p>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Kernel development.</strong> Registers a misc character device with an ioctl handler that receives an image path from user space and modifies the image data in kernel space.</li>
+                <li><strong>CUDA acceleration.</strong> A CUDA kernel performs per-pixel image processing on the GPU, mirroring the CPU-side kernel-module implementation for comparison.</li>
+                <li><strong>Integration.</strong> A user-space CUDA application loads image data, copies it to GPU memory, runs the kernel, and copies results back.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>C</li><li>CUDA</li><li>Linux kernel</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/Jetson-Nano-Custom-Kernel-Modules" target="_blank" rel="noopener">Repo<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+
+          <article class="project" id="raytracing" data-reveal>
+            <div class="project-top"><span class="project-idx">P.07</span><span class="project-meta">Embedded</span></div>
+            <h3>Ray tracing on Cortex-M7</h3>
+            <p>A ray-tracing engine ported to the Teensy 4.1 (600 MHz Cortex-M7), rendering 3D sphere scenes to an ILI9341 display within tight memory limits.</p>
+            <details>
+              <summary>Deep dive</summary>
+              <ul>
+                <li><strong>Embedded optimization.</strong> Single-precision floats, object reuse, and reduced scene complexity to fit a full ray tracer on a microcontroller with limited RAM.</li>
+                <li><strong>Render pipeline.</strong> Sphere intersection, Lambertian, metal, and dielectric materials, and camera rays in an embedded runtime.</li>
+                <li><strong>Tuning.</strong> Precision and recursion depth traded against image fidelity and render time.</li>
+              </ul>
+            </details>
+            <div class="project-foot">
+              <ul class="tags"><li>C++</li><li>Teensy 4.1</li><li>PlatformIO</li></ul>
+              <a class="repo" href="https://github.com/Nahjay/Teensy-Ray-Tracing" target="_blank" rel="noopener">Repo<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="xp-h">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>02</span> Experience</p>
+          <h2 id="xp-h">Where I’ve <em>shipped.</em></h2>
+          <p class="section-sub">Firmware at NVIDIA, accelerator research at UF, and embedded systems in industry. Full details are on my <a href="assets/Nahjay_Resume_V3.pdf" target="_blank" rel="noopener">resume</a>.</p>
+        </div>
+
+        <ol class="xp">
+          <li class="xp-item" data-reveal>
+            <div class="xp-when">Oct 2024 — Current<span>Gainesville, FL</span></div>
+            <div class="xp-body">
+              <h3>Undergraduate Researcher <span class="xp-org">SmartSystems Lab, University of Florida</span></h3>
+              <ul>
+                <li>Architected the streaming frontend and control FSM for an RGB 3×3 convolution accelerator on Zynq-7000: line-buffer window generators feed ping-pong FIFOs, overlapping frame N+1 load with frame N compute at 1 window/cycle.</li>
+                <li>Integrated three 3×3 systolic PE arrays (27 MACs/cycle) with an AXI4-Stream clock-domain-crossing output FIFO: ~165 MHz post-route fMax (4.46 GMAC/s peak) and 94% MAC utilization at 64×64 frames in simulation.</li>
+                <li>Built a Vivado/ModelSim/Python flow benchmarking fMax, resources, power, and accuracy against a NumPy golden model; verified bit-exact output over 24 scenarios and traced scaling limits to flip-flop FIFOs (85% of registers) and FIFO select fanout.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="xp-item" data-reveal>
+            <div class="xp-when">Jan 2026 — Dec 2026<span>Gainesville, FL</span></div>
+            <div class="xp-body">
+              <h3>Undergraduate Teaching Assistant <span class="xp-org">Digital Design (EEL4712C), University of Florida</span></h3>
+              <ul>
+                <li>Taught digital design concepts (FSMs, datapath/control separation, pipelining, testbenching with assertions and CRV) in SystemVerilog; led labs, debugged student RTL through simulation, synthesis, and FPGA deployment, and graded assignments.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="xp-item xp-group" data-reveal>
+            <div class="xp-when">May 2024 — Aug 2026<span>Santa Clara, CA</span></div>
+            <div class="xp-body">
+              <h3>NVIDIA <span class="xp-org">GPU Firmware Engineer Intern · 3 summers</span></h3>
+
+              <div class="xp-sub">
+                <h4>Chips Team <span>May — Aug 2026</span></h4>
+                <ul>
+                  <li>Rearchitected the settings (register-configuration) model for the GPU hardware-initialization boot microcode across NVIDIA’s next-generation Rubin-architecture client GPUs (desktop, workstation, and notebook SKUs), consolidating structure definitions from 40+ per-module C headers into a single schema-generated header.</li>
+                  <li>Redesigned the microcode’s build and linking process so configuration data packages directly into the microcode’s own data memory alongside its execution sequence, letting settings and code deploy together as one unit for the first time.</li>
+                  <li>Built a build-time “burn” capability that writes finalized per-chip configuration values into the packaged microcode image, producing a fully self-contained, chip-specific boot image.</li>
+                </ul>
+              </div>
+
+              <div class="xp-sub">
+                <h4>Infrastructure Team <span>May — Aug 2025</span></h4>
+                <ul>
+                  <li>Built a remote pipeline that validates firmware on target hardware, automating GPU ROM data extraction and Pytest suite execution.</li>
+                  <li>Created a tool that binary-searches Perforce changelists to find commits behind firmware build failures or performance degradation.</li>
+                  <li>Extended my 2024 containerized firmware build environment so VBIOS builds that could take hours now take minutes.</li>
+                </ul>
+              </div>
+
+              <div class="xp-sub">
+                <h4>Infrastructure Team <span>May — Aug 2024</span></h4>
+                <ul>
+                  <li>Built a wizard and supporting scripts (Python, Batch, Bash, PowerShell, Docker) that generate custom containerized environments for building firmware packages and microcode components, cutting ramp-up time for new engineers.</li>
+                  <li>Optimized the boot sequence in C for next-generation GPUs, removing obsolete code and integrating new architectural features.</li>
+                  <li>Resolved MASM build issues by updating assembler tooling, fixing ROM data table directives, and improving assembly performance.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="xp-item" data-reveal>
+            <div class="xp-when">May 2023 — Apr 2024<span>Coral Springs, FL</span></div>
+            <div class="xp-body">
+              <h3>Electrical Engineer Intern <span class="xp-org">Cell Antenna Corporation</span></h3>
+              <ul>
+                <li>Built a full-stack direction-finding system (FastAPI, Rust, JavaScript) visualizing real-time antenna-array signal data.</li>
+                <li>Developed a Python/DearPyGui GUI and an asynchronous Rust (Actix-Web) API to control a Yocto Linux-based SDR and a GPS device.</li>
+                <li>Wrote time-critical Assembly firmware for an Atmel microcontroller synchronized to a GPS PPS signal at microsecond precision, and a Rust program to process raw IQ data from an FPGA-based SDR.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker"><span>03</span> About</p>
+          <h2 id="about-h">From PC builds to <em>silicon.</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-intro" data-reveal>
+            <p>I’m a Computer Engineering undergraduate at the University of Florida focused on digital design, computer architecture, and firmware. What started as curiosity about PC hardware and gaming turned into a pursuit of understanding how computing systems work at the lowest level.</p>
+            <p>I’m driven by the challenge of optimizing hardware performance and bridging the gap between silicon and software, whether that’s closing timing on an accelerator or restructuring how a GPU’s boot microcode is built.</p>
+            <blockquote>My mission is to design efficient, scalable systems that push the boundaries of computing performance, and to help build the next generation of silicon that powers AI, research, and global infrastructure.</blockquote>
+          </div>
+
+          <div class="about-cards">
+            <div class="card" data-reveal>
+              <p class="card-label">Education</p>
+              <div class="edu">
+                <div>
+                  <h3>University of Florida</h3>
+                  <p>B.S. Computer Engineering · GPA 3.93</p>
+                </div>
+                <span>Aug 2024 — May 2027 (exp.)</span>
+              </div>
+              <div class="edu">
+                <div>
+                  <h3>Broward College</h3>
+                  <p>Associate of Arts · GPA 3.95</p>
+                </div>
+                <span>Aug 2022 — May 2024</span>
+              </div>
+            </div>
+
+            <div class="card" data-reveal>
+              <p class="card-label">Leadership</p>
+              <div class="edu">
+                <div>
+                  <h3>Secretary, FPGAtors</h3>
+                  <p>UF’s FPGA student organization. I handle event planning, club liaison work, and slide decks, and contribute to technical workshop planning and development.</p>
+                </div>
+                <span>Aug 2026 — Current</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills" data-reveal>
+          <div class="skill-row">
+            <p class="card-label">Languages</p>
+            <ul class="tags"><li>C</li><li>C++</li><li>SystemVerilog</li><li>Python</li><li>Rust</li><li>VHDL</li><li>Assembly</li><li>Bash</li><li>PowerShell</li></ul>
+          </div>
+          <div class="skill-row">
+            <p class="card-label">Hardware / FPGA</p>
+            <ul class="tags"><li>Vivado (ILA)</li><li>Quartus (Timing Analyzer)</li><li>Questa</li><li>Cadence Virtuoso</li><li>UVM</li><li>STA</li><li>AXI4 / AXI4-Stream</li><li>SystemRDL</li></ul>
+          </div>
+          <div class="skill-row">
+            <p class="card-label">Systems &amp; tools</p>
+            <ul class="tags"><li>Linux</li><li>Git</li><li>Perforce</li><li>Docker</li><li>GNU Make</li><li>CMake</li><li>GDB</li><li>Pytest</li><li>CUDA</li></ul>
+          </div>
+          <div class="skill-row">
+            <p class="card-label">Off the clock</p>
+            <ul class="tags tags-soft"><li>PC building</li><li>FPGA tinkering</li><li>Robotics</li><li>PC gaming</li><li>Basketball</li><li>Soccer</li><li>Music</li><li>Reading</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="container">
+        <div class="contact-box" data-reveal>
+          <p class="kicker"><span>04</span> Contact</p>
+          <h2 id="contact-h">Let’s build something <em>fast.</em></h2>
+          <p class="section-sub">Open to opportunities in hardware engineering, firmware development, and computer architecture.</p>
+          <a class="contact-mail" href="mailto:nahjaybattieste@gmail.com">nahjaybattieste@gmail.com<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          <ul class="contact-links">
+            <li><a href="tel:+19544947138">954-494-7138</a></li>
+            <li><a href="https://www.linkedin.com/in/nahjay-battieste-a84655224" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-li" /></svg>LinkedIn</a></li>
+            <li><a href="https://github.com/Nahjay" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh" /></svg>GitHub</a></li>
+            <li><a href="assets/Nahjay_Resume_V3.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc" /></svg>Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Nahjay Battieste</span>
+      <span>Gainesville, Florida</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
 </html>
